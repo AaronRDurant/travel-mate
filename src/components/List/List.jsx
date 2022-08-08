@@ -14,15 +14,15 @@ import useStyles from "./styles.js";
 
 const List = ({
   places,
+  childClicked,
+  isLoading,
   type,
   setType,
   rating,
   setRating,
-  childClicked,
-  isLoading,
 }) => {
-  const [elRefs, setElRefs] = useState([]);
   const classes = useStyles();
+  const [elRefs, setElRefs] = useState([]);
 
   useEffect(() => {
     setElRefs((refs) =>
